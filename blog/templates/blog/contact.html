@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="contact-section">
+    <h2>Contact Me</h2>
+    <p class="contact-intro">
+        Feel free to reach out via email, LinkedIn, phone, or check my coding profiles.
+    </p>
+
+    <!-- Personal Contact Info -->
+    <div class="contact-info">
+        <div class="contact-card">
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/naveena-ananthakumar-6928b6336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/naveena-profile</a></p>
+        </div>
+        <div class="contact-card">
+            <h3>Email</h3>
+            <p><a href="mailto:youremail@example.com">naveenaananth06@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+            <h3>Phone</h3>
+            <p>+91-8778361598</p>
+        </div>
+    </div>
+
+    <!-- Coding Profiles -->
+    <div class="coding-profiles">
+        <h3>Coding Profiles</h3>
+        <div class="profile-links">
+            <a href="https://leetcode.com/u/Naveena_06/" target="_blank">LeetCode</a>
+            <a href="https://www.geeksforgeeks.org/profile/naveenaa0qed" target="_blank">GeeksforGeeks</a>
+            <a href="https://github.com/dashboard" target="_blank">GitHub</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

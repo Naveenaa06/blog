@@ -1,0 +1,72 @@
+
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<section class="portfolio-section">
+    <div class="portfolio-container">
+
+  <h2>Professional Profile</h2>
+  <p class="portfolio-intro">
+    A brief overview of my background, skills, and learning journey.
+  </p>
+
+  <!-- EDUCATION -->
+  <div class="portfolio-block">
+    <h3>Education</h3>
+    <p>
+      Bachelor of Engineering<br>
+      Specialization: Computer Sience<br>
+      Dr.N.G.P Institute of Technology
+    </p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="portfolio-block">
+    <h3>Programming languages</h3>
+    <div class="skills">
+      <span>Python</span>
+      <span>Java</span>
+      <span>C</span>
+      <span>C++</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="portfolio-block">
+    <h3>Projects</h3>
+    <p>
+      <strong>Personal Portfolio Website</strong><br>
+      Developed a responsive portfolio using HTML, CSS and Django.
+
+      <br><br>
+
+      <strong>Neykuri Mart</strong><br>
+      Created an online platform to trade goods from traders of coastal and hilly regions.
+
+      <br><br>
+
+      <strong>EnergyMate</strong><br>
+      A real-time energy tracking system using IOT.
+    </p>
+  </div>
+  <!-- ===== Achievements Section ===== -->
+<div class="portfolio-block">
+    <h3>Achievements</h3>
+    <p>
+        • MSME Finalist – Recognized as a finalist in the MSME competition for innovative solutions. <br>
+        • Leetcode - 200+ questions. <br>
+        • Member of Institution Innovation Cell.
+
+    </p>
+</div>
+  
+
+  <!-- RESUME BUTTON -->
+  <div class="resume-section">
+    <a href="{% static 'blog/images/resume.pdf.pdf' %}" class="resume-btn" download>
+      Download Resume
+    </a>
+  </div>
+  </div>
+</section>
+{% endblock %}

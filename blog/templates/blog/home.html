@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm Naveena</h1>
+        <h2>Web Developer & Designer</h2>
+        <p> I'm a passionate Web Developer with a strong interest in creating clean, 
+    responsive, and user-friendly websites.<br>I enjoy transforming ideas into real-world applications
+    using modern web technologies. My goal is to build visually<br>
+    appealing designs that are fast, functional,and easy to use.</p>
+    </div>
+    <div class="hero-image">
+        <img src="{% static 'blog/images/profile.jpg' %}" alt="Profile">
+    </div>
+</section>
+{% endblock %}
