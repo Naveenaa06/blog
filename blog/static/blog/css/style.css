@@ -181,12 +181,15 @@ body {
 
 /* ===== Contact Section ===== */
 .contact-section {
-    padding: 80px 40px;
-    max-width: 900px;
-    margin: auto;
+    padding: 80px 0;
     text-align: center;
     background-color: #f5f2ee;
-    min-height: 80vh;
+    width: 100%
+}
+.contact-section .contact-container{
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 .contact-section h2 {
