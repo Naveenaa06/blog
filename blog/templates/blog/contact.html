@@ -2,42 +2,53 @@
 {% load static %}
 
 {% block content %}
+
 <section class="contact-section">
-    <div class="contact-container">
+  <div class="contact-container">
+
     <h2>Contact Me</h2>
     <p class="contact-intro">
-        Feel free to reach out via email, LinkedIn, phone, or check my coding profiles.
+      Feel free to reach out via email, LinkedIn, phone, or check my coding profiles.
     </p>
 
-    <!-- ===== Professional Contact Form Box ===== -->
+    <!-- Contact Form (NOW AT TOP) -->
     <div class="contact-form-box">
-        <form>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
             <div class="form-row">
-                <label for="name">Your Name :</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label>Your Name :</label>
+                <input type="text" required
+                pattern="[A-Za-z\s]+"
+                title="Only letters are allowed">
+
             </div>
 
             <div class="form-row">
-                <label for="email">Your Email :</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label>Your Email :</label>
+                <input type="email" required>
             </div>
 
             <div class="form-row">
-                <label for="subject">Subject :</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <label>Subject :</label>
+                <input type="text" required>
             </div>
 
             <div class="form-row">
-                <label for="message">Your Message :</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+                <label>Your Message :</label>
+                <textarea rows="4" required></textarea>
+            </div>
+
+            <div class="form-row">
+                <label>Upload File :</label>
+                <input type="file" accept=".jpg,.jpeg,.pdf">
             </div>
 
             <button type="submit">Send Message</button>
         </form>
     </div>
-    <!-- ===== End Form Box ===== -->
 
-    <!-- Existing Contact Info -->
+    <!-- Personal Contact Info -->
     <div class="contact-info">
         <div class="contact-card">
             <h3>LinkedIn</h3>
@@ -48,13 +59,9 @@
             <p><a href="mailto:naveenaananth06@gmail.com">naveenaananth06@gmail.com</a></p>
         </div>
         <div class="contact-card">
-    <h3>WhatsApp</h3>
-    <p>
-        <a href="https://wa.me/918778361598" target="_blank">
-            +91-8778361598
-        </a>
-    </p>
-</div>
+            <h3>Phone</h3>
+            <p>+91-8778361598</p>
+        </div>
     </div>
 
     <!-- Coding Profiles -->
@@ -66,6 +73,8 @@
             <a href="https://github.com/dashboard" target="_blank">GitHub</a>
         </div>
     </div>
-    </div>
+
+  </div>
 </section>
+
 {% endblock %}

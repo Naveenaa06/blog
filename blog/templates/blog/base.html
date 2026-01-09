@@ -6,6 +6,27 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
 </head>
+<script>
+document.getElementById("fileInput").addEventListener("change", function () {
+    const file = this.files[0];
+    if (!file) return;
+
+    const allowedTypes = ["image/jpeg", "application/pdf"];
+    const maxSize = 2 * 1024 * 1024; // 2MB
+
+    if (!allowedTypes.includes(file.type)) {
+        alert("Only JPG, JPEG, and PDF files are allowed.");
+        this.value = "";
+        return;
+    }
+
+    if (file.size > maxSize) {
+        alert("File size must be less than 2MB.");
+        this.value = "";
+        return;
+    }
+});
+</script>
 <body>
 
 <nav class="navbar">
