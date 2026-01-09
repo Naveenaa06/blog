@@ -1,29 +1,59 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 
-
 {% block content %}
-
 <section class="contact-section">
     <h2>Contact Me</h2>
     <p class="contact-intro">
         Feel free to reach out via email, LinkedIn, phone, or check my coding profiles.
     </p>
 
-    <!-- Personal Contact Info -->
+    <!-- ===== Professional Contact Form Box ===== -->
+    <div class="contact-form-box">
+        <form>
+            <div class="form-row">
+                <label for="name">Your Name :</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Your Email :</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="subject">Subject :</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Your Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <!-- ===== End Form Box ===== -->
+
+    <!-- Existing Contact Info -->
     <div class="contact-info">
         <div class="contact-card">
             <h3>LinkedIn</h3>
-            <p><a href="https://www.linkedin.com/in/naveena-ananthakumar-6928b6336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/naveena-profile</a></p>
+            <p><a href="https://www.linkedin.com/in/naveena-ananthakumar-6928b6336" target="_blank">linkedin.com/in/naveena-profile</a></p>
         </div>
         <div class="contact-card">
             <h3>Email</h3>
-            <p><a href="mailto:youremail@example.com">naveenaananth06@gmail.com</a></p>
+            <p><a href="mailto:naveenaananth06@gmail.com">naveenaananth06@gmail.com</a></p>
         </div>
         <div class="contact-card">
-            <h3>Phone</h3>
-            <p>+91-8778361598</p>
-        </div>
+    <h3>WhatsApp</h3>
+    <p>
+        <a href="https://wa.me/918778361598" target="_blank">
+            +91-8778361598
+        </a>
+    </p>
+</div>
     </div>
 
     <!-- Coding Profiles -->
@@ -36,5 +66,4 @@
         </div>
     </div>
 </section>
-
 {% endblock %}
